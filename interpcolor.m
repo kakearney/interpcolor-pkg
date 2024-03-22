@@ -21,7 +21,7 @@ function col = interpcolor(x, cmap, lims, nancol)
 % Copyright 2010 Kelly Kearney
 
 if nargin < 3 || isempty(lims)
-    lims = minmax(x);
+    lims = [min(x(:)) max(x(:))];
 end
 
 if nargin < 4 || isempty(nancol)
